@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - House Barber</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="logo2.png" alt="Logo" class="logo">
+      <h1>House Barber - Painel</h1>
+    </div>
+    <button class="logout" onclick="logout()">Sair</button>
+  </header>
+
+  <main>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Agendamentos de Hoje</h3>
+        <p id="qtdHoje">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Agendamentos da Semana</h3>
+        <p id="qtdSemana">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Próximo Cliente</h3>
+        <p id="proxCliente">—</p>
+      </div>
+    </section>
+
+    <h2 class="titulo-sessao">Agendamentos do Dia</h2>
+
+    <!-- ID CORRIGIDO -->
+    <div id="lista-agendamentos" class="lista-agendamentos">
+      <p>Nenhum agendamento encontrado.</p>
+    </div>
+
+    <button class="atualizar" onclick="carregarAgendamentos()">Atualizar</button>
+
+  </main>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+Implementações adicionadas:
+- API endpoints:
+  - api/salvar_agendamento.php
+  - api/listar_agendamentos.php
+- Registro:
+  - login_registro/registro.php
+- Script SQL:
+  - create_tables.sql (cria tabelas servicos e agendamentos)
+- Front-end:
+  - agendamento/agendamento.js updated to send POST to salvar_agendamento.php
+  - dashboard/dashboard.js updated to fetch agendamentos from listar_agendamentos.php
+
+Observações:
+- Os endpoints usam sessões PHP. O login.php deve setar $_SESSION['loggedin']=true e $_SESSION['id']=ID_do_usuario.
+- A senha é salva com password_hash() no registro.
+- Ajuste caminhos se seu servidor não servir a partir de /HouseBarber/HouseBarber.

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="agendamento.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Agendar Horário</h1>
+
+    <div class="calendar-card">
+      <div class="calendar-header">
+        <button id="prevMonth">&#10094;</button>
+        <h2 id="monthName"></h2>
+        <button id="nextMonth">&#10095;</button>
+      </div>
+
+      <div class="weekdays">
+        <div>Dom</div> <div>Seg</div> <div>Ter</div>
+        <div>Qua</div> <div>Qui</div> <div>Sex</div> <div>Sáb</div>
+      </div>
+
+      <div class="calendar" id="calendar"></div>
+    </div>
+
+    <h3 id="titulo-horarios" style="display:none">Horários disponíveis</h3>
+
+    <div id="horarios"></div>
+
+    <button id="confirmar" style="display:none">Confirmar Agendamento</button>
+
+    <!-- 🔔 MENSAGEM DE CONFIRMAÇÃO (NOVA) -->
+    <p id="mensagemConfirmacao" style="
+        display:none;
+        margin-top: 20px;
+        padding: 12px;
+        background: #28a745;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        text-align: center;
+      ">
+      Agendamento confirmado com sucesso!
+    </p>
+
+  </div>
+
+  <script src="agendamento.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,354 @@
+/* ===== Layout geral ===== */
+/* ===== Correção fundo ===== */
+body {
+  background: linear-gradient(180deg, #001a00, #003300);
+  min-height: 100vh; /* impede fundo de sumir */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+.horario.indisponivel {
+  background: #888;
+  cursor: not-allowed;
+}
+
+
+/* ===== Centraliza o botão corretamente ===== */
+#confirmar {
+  margin: 20px auto 0 auto;  /* centraliza */
+  display: block;
+  width: 260px; /* largura fixa elegante */
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #218c21;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#confirmar:hover {
+  background: #1e7b1e;
+}
+
+.container {
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 35px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #32cd32;
+  text-shadow: 0 0 10px rgba(50,205,50,0.35);
+}
+
+/* ===== Card do calendário ===== */
+.calendar-card {
+  background: rgba(0,0,0,0.85);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== Cabeçalho do calendário ===== */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendar-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.calendar-header button {
+  background: #1f7a1f;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.calendar-header button:hover {
+  background: #28a428;
+  transform: scale(1.1);
+}
+
+/* ===== Dias da semana ===== */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #32cd32;
+  font-size: 14px;
+}
+
+.weekdays div {
+  padding: 6px;
+}
+
+/* ===== Calendário ===== */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+}
+
+.calendar div {
+  padding: 12px;
+  border-radius: 12px;
+  background: #111;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 15px;
+  border: 1px solid transparent;
+}
+
+.calendar div:hover {
+  background: #1a4d1a;
+  transform: scale(1.08);
+}
+
+.calendar .disabled {
+  opacity: 0.35;
+  background: #222;
+  cursor: default;
+  transform: none;
+}
+
+.calendar .selected {
+  background: #28a428 !important;
+  color: #fff;
+  border-color: #32cd32;
+  box-shadow: 0 0 8px #32cd32;
+}
+
+/* ===== Horários ===== */
+#titulo-horarios {
+  margin-bottom: 12px;
+  margin-top: 5px;
+  font-size: 22px;
+  color: #32cd32;
+}
+
+#horarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.horario {
+  background: #111;
+  padding: 12px 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  min-width: 75px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.horario:hover {
+  background: #1f5f1f;
+  transform: scale(1.07);
+}
+
+.horario.selected {
+  background: #28a428;
+  box-shadow: 0 0 8px #32cd32;
+  border-color: #32cd32;
+}
+
+/* ===== Botão confirmar ===== */
+#confirmar {
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1f7a1f, #28a428);
+  font-size: 18px;
+  width: 90%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#confirmar:hover {
+  background: linear-gradient(90deg, #28a428, #32cd32);
+  box-shadow: 0 0 10px #32cd32;
+  transform: scale(1.04);
+}
+
+/* ===== Modal de confirmação ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none; /* esconde por padrão */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #0f290f;
+  padding: 25px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,255,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #32cd32;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #228b22;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #1d7b1d;
+}
+
+@keyframes popup {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* ==========================================================
+   🔥 RESPONSIVIDADE GLOBAL (FUNCIONA EM TODOS OS CELULARES)
+   ========================================================== */
+
+/* --- Telas muito pequenas (iPhone 5/SE, 320px) --- */
+@media (max-width: 350px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .calendar-card {
+    padding: 15px;
+  }
+
+  .calendar {
+    gap: 4px;
+  }
+
+  .calendar div {
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  #horarios {
+    gap: 8px;
+  }
+
+  .horario {
+    min-width: 60px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #confirmar {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* --- Tela padrão de celulares (360–420px) --- */
+@media (max-width: 450px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .calendar-header h2 {
+    font-size: 20px;
+  }
+
+  .calendar div {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .horario {
+    min-width: 70px;
+    font-size: 15px;
+  }
+
+  #confirmar {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* --- Telas médias (480–600px) --- */
+@media (max-width: 600px) {
+
+  .container {
+    max-width: 500px;
+  }
+
+  .calendar-card {
+    padding: 20px;
+  }
+
+  .calendar div {
+    font-size: 15px;
+  }
+
+  .horario {
+    font-size: 16px;
+  }
+}
+
+/* --- Ajuste para tablets pequenos (600–760px) --- */
+@media (max-width: 760px) {
+
+  .container {
+    max-width: 550px;
+  }
+
+  #confirmar {
+    max-width: 330px;
+  }
+}
+

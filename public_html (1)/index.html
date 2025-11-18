@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia - Início</title>
+  <link rel="stylesheet" href="pagina_inicial/style.css">
+</head>
+<body>
+
+  <!-- Navegação -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">House Barber</div>
+
+    <nav class="nav-links">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#registrar" class="registrar-btn">Registrar</a>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  </div>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero" id="sobre">
+    <div class="hero-content">
+      <div class="hero-img-container">
+        <img src="pagina_inicial/barbeiro.jpg" alt="Foto do Barbeiro" class="foto-3d">
+      </div><br>
+      <div class="info-barber card fade-in">
+        <h2>Olá, me chamo Socrates !!</h2>
+        <p>Sou barbeiro há mais de 10 anos, especialista em cortes clássicos e modernos. <br>
+           Priorizo estilo, conforto e um atendimento impecável para transformar seu visual.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="galeria" id="servicos">
+    <h2 class="section-title">Cortes Realizados</h2>
+    <div class="cortes-grid">
+      <div class="corte-card zoom-in">
+        <img src="pagina_inicial/fade classico.png" alt="Corte Fade">
+        <h3>Fade Clássico</h3>
+        <p>Degradê moderno com acabamento impecável.</p>
+      </div>
+      <div class="corte-card zoom-in">
+        <img src="pagina_inicial/navalhado.png" alt="Corte Navalhado">
+        <h3>Navalhado</h3>
+        <p>Linhas precisas utilizando navalha profissional.</p>
+      </div>
+      <div class="corte-card zoom-in">
+        <img src="pagina_inicial/barba.webp" alt="Cabelo e Barba">
+        <h3>Barba e Sobrancelha</h3>
+        <p>Combo especial para renovar seu visual com desconto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registro -->
+  <section class="registro-section" id="registrar">
+    <button onclick="window.location.href='login_registro/login.php'" class="btn-registrar pulse">REGISTRE-SE</button>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> House Barber. Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+
+  </script>
+</body>
+</html>

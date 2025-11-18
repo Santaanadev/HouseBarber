@@ -1,0 +1,95 @@
+/* ===== Fundo e Fonte (mesmo do index) ===== */
+body {
+  margin: 0;
+  background: linear-gradient(-45deg, #000 0%, #052a0d 50%, #000 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+/* ===== Container Login ===== */
+.container {
+  text-align: center;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Título e Subtítulo */
+.titulo h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.subtitulo h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* Caixa de formulário */
+.formulario {
+  background: #111;
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.2);
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  text-align: left;  /* Mantém o texto do usuário justificado */
+}
+
+/* Botão principal */
+.btn {
+  width: 100%;
+  background: #28a745;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #218838;
+}
+
+/* Registrar-se link */
+.registrar-se {
+  margin-top: 20px;
+}
+
+.registrar-se a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.registrar-se a:hover {
+  text-decoration: underline;
+}

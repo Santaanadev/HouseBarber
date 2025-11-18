@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Barber - Serviços</title>
+  <link rel="stylesheet" href="servicos.css">
+</head>
+<body>
+
+<header>
+  <img src="logo2.png">
+</header>
+
+<main>
+<section id="servicos">
+  <h2>Serviços</h2>
+
+  <nav>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+
+    <div class="produto">
+      <img src="barba.webp" class="produto-img">
+      <div class="produto-info">
+        <h3>Barba e Cavanhaque</h3>
+        <p>Tempo: 20 minutos</p>
+        <p>Valor: R$15,99</p>
+        <p>OBS: Chegar com 10min de antecedência</p>
+        <button onclick="agendar('Barba e Cavanhaque')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="cabelo e barba.avif" class="produto-img">
+      <div class="produto-info">
+        <h3>Cabelo & Barba</h3>
+        <p>Tempo: 35 minutos</p>
+        <p>Valor: R$29,99</p>
+        <p>OBS: Chegar com 10min de antecedência</p>
+        <button onclick="agendar('Cabelo e Barba')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="cabelo e pigmentação.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Cabelo & Pigmentação</h3>
+        <p>Tempo: 40 minutos</p>
+        <p>Valor: R$34,99</p>
+        <p>OBS: Chegar com 10min de antecedência</p>
+        <button onclick="agendar('Cabelo e Pigmentação')">Agendar</button>
+      </div>
+    </div>
+
+    <!-- ===== NOVOS SERVIÇOS ADICIONADOS ===== -->
+
+    <div class="produto">
+      <img src="fadeclassico.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Fade Clássico</h3>
+        <p>Tempo: 30 minutos</p>
+        <p>Valor: R$24,99</p>
+        <p>OBS: Indicado para todos os tipos de cabelo</p>
+        <button onclick="agendar('Fade Clássico')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="degrademoderno.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Degradê Moderno</h3>
+        <p>Tempo: 35 minutos</p>
+        <p>Valor: R$27,99</p>
+        <p>OBS: Finalização com navalha</p>
+        <button onclick="agendar('Degradê Moderno')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="designsobrancelha.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Design de Sobrancelha</h3>
+        <p>Tempo: 15 minutos</p>
+        <p>Valor: R$12,00</p>
+        <p>OBS: Feito com linha e navalha</p>
+        <button onclick="agendar('Design de Sobrancelha')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="platinadomasculino.png" class="produto-img">
+      <div class="produto-info">
+        <h3>Platinado Masculino</h3>
+        <p>Tempo: 90 minutos</p>
+        <p>Valor: R$120,00</p>
+        <p>OBS: Inclui descoloração e tonalização</p>
+        <button onclick="agendar('Platinado Masculino')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="luzesmasculino.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Luzes Masculinas</h3>
+        <p>Tempo: 70 minutos</p>
+        <p>Valor: R$89,90</p>
+        <p>OBS: Luzes no papel ou pente</p>
+        <button onclick="agendar('Luzes Masculinas')">Agendar</button>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="alisamentomasculino.jpg" class="produto-img">
+      <div class="produto-info">
+        <h3>Alisamento Masculino</h3>
+        <p>Tempo: 50 minutos</p>
+        <p>Valor: R$59,99</p>
+        <p>OBS: Produto anti-formol</p>
+        <button onclick="agendar('Alisamento Masculino')">Agendar</button>
+      </div>
+    </div>
+
+  </nav>
+</section>
+</main>
+
+<footer>
+  &copy; House Barber 2025 — Todos os direitos reservados
+</footer>
+
+<script>
+function agendar(servico) {
+  window.location.href = `../agendamento/agendamento.html?servico=${encodeURIComponent(servico)}`;
+}
+</script>
+
+</body>
+</html>
